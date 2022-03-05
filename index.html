@@ -51,7 +51,7 @@
 
       // mesh.scale.set(1, 2, 1);
 
-      // scene.add(mesh);
+      scene.add(mesh);
 
       var light = new THREE.PointLight(0xffffff, 1, 500);
       light.position.set(10, 0, 25);
@@ -61,6 +61,7 @@
       var render = () => {
         // prevent distortion by re-draw
         requestAnimationFrame(render);
+        mesh.rotation.x += 0.05;
         renderer.render(scene, camera);
       };
 
