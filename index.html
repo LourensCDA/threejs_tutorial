@@ -40,6 +40,9 @@
       var material = new THREE.MeshLambertMaterial({ color: 0xffcc00 });
       var mesh = new THREE.Mesh(geometry, material);
 
+      // change rotation of object
+      mesh.position.x = 2;
+
       scene.add(mesh);
 
       var light = new THREE.PointLight(0xffffff, 1, 500);
@@ -47,7 +50,13 @@
 
       scene.add(light);
 
-      renderer.render(scene, camera);
+      var render = () => {
+        // prevent distortion by re-draw
+        requestAnimationFrame(render);
+        renderer.render(scene, camera);
+      };
+
+      render();
     </script>
   </body>
 </html>
