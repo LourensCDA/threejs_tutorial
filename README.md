@@ -5,3 +5,4 @@ YouTube Tutorial: [https://www.youtube.com/watch?v=6oFvqLfRnsU](https://www.yout
 Extensions used:
 Live Server
 Prettier
+Threejs Snippets

@@ -30,10 +30,16 @@
         renderer.setSize(window.innerWidth, window.innerHeight);
         camera.aspect = window.innerWidth / window.innerHeight;
 
-        camera.updateProjectMatrix();
+        camera.updateProjectionMatrix();
       });
 
       renderer.render(scene, camera);
+
+      var geometry = new THREE.SphereGeometry(1, 10, 10);
+      var material = new THREE.MeshLambertMaterial({ color: 0xffcc00 });
+      var mesh = new THREE.Mesh(geometry, material);
+
+      scene.add(mesh);
     </script>
   </body>
 </html>
