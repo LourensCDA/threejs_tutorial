@@ -6,6 +6,3 @@ Extensions used:
 Live Server
 Prettier
 Threejs Snippets
-
-**2022/03/05**
-Stopped at 28:00 minutes
